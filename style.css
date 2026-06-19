@@ -1,0 +1,151 @@
+body{
+    background-color: rgb(224, 15, 133);
+}
+*
+{
+    box-sizing: border-box;
+}
+.container{
+    width: 360px;
+    height: 800px;
+   margin: 50px auto;
+    border-radius: 20px;
+    background-color: white;
+}
+button{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    margin-top: 56px;
+    margin-left: 20px;
+    border: none;
+}
+h1{
+    Width: 87px;
+    height: 39px;
+    margin-top: 23px;
+    margin-left: 22px;
+}
+input{
+    box-sizing: border-box;
+    width: 316px;
+    height: 44px;
+    margin-left: 24px;
+    margin-top: 17px;
+    border-radius: 12px;
+    border: none;
+    background-color: #EFEFEF;
+}
+input::placeholder{
+    padding-left: 15px;
+}
+
+.menu .menu-items{
+    display: inline-block;
+    width: 74px;
+    height: 101px;
+    margin: 10px;
+}
+.menu h4{
+    color: #C4C4C4;
+    width: 39px;
+    height: 19px;
+    margin-top: 8px;
+    margin-left: 40px;
+    
+}
+.menu .image{
+    display: flex;
+    width: 74px;
+    height: 74px;
+    background-color: #C4C4C4;
+    border-radius: 12px;
+    margin-left: 24px;
+    margin-top: 29px;
+    justify-content: center;
+    align-items: center;
+}
+.menu-items:hover .image {
+   background-color: #EAE2B7;
+}
+.menu-items:hover h4{
+    color: black;
+}
+h3{
+    margin-top: 32px;
+    margin-left: 24px;
+    width: 65px;
+    height: 24px;
+}
+.big-mac{
+    width: 316px;
+    height: 88px;
+    margin-left: 24px;
+    margin-top: 26px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    border: 1px solid #C4C4C4;
+}
+.kfc-burger{
+    width: 316px;
+    height: 88px;
+    margin-left: 24px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    border: 1px solid #C4C4C4;
+}
+    
+    .fish-burger{
+        width: 316px;
+        height: 88px;
+        margin-left: 24px;
+        margin-top: 10px;
+        border-radius: 10px;
+        background-color: #FFFFFF;
+        border: 1px solid #C4C4C4;
+    }
+
+img[src="img/f5bb08602a247c8f15f040d629a48083da5b9759.png"]{
+    width: 60px;
+    height: 68.51px;
+    margin-bottom: 10px;
+    margin-left: 16px;
+}
+img[src="img/f0d0c0e548bd14c232d00a8671377d3f7b4a1319.png"]{
+    width: 60px;
+    height: 68.51px;
+    margin-bottom: 10px;
+    margin-left: 16px;
+}
+img[src="img/36e625180641bd40a142db0c8b314b3e904f2408.png"]{
+    width: 60px;
+    height: 68.51px;
+    margin-bottom: 10px;
+    margin-left: 16px;
+}
+.burgers .burger-title{
+    width: 65px;
+    height: 19px;
+    margin-top: 8px;
+    margin-left: 16px;
+
+}
+.big-mac,
+.kfc-burger,
+.fish-burger {
+    width: 316px;
+    height: 88px;
+    margin-left: 24px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    border: 1px solid #C4C4C4;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.price{
+    color: red;
+}
