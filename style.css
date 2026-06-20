@@ -149,3 +149,9 @@ img[src="img/36e625180641bd40a142db0c8b314b3e904f2408.png"]{
 .price{
     color: red;
 }
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
