@@ -1,0 +1,200 @@
+body{
+    background-color: azure;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+header {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+    font-size: 48px;
+    margin-top: 142px;
+    margin-left: 350px;
+}
+
+span{
+     font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+    font-size: 48px;
+    line-height: 80px;
+    letter-spacing: -0.5px;
+}
+p{
+    margin-top: 10px;
+    margin-left: 350px;
+         font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 0px;
+}
+.container{
+    width: 1500px;
+    height: 500px;
+     margin-top: 50px;
+    margin-left: 350px;
+}
+.block{
+    background-color: white; 
+    border-radius: 20px;
+    width: 295px;
+    height: 470px;
+    float: left;
+   margin-right: 20px;
+   text-align: center;
+   vertical-align: top;
+}
+.p{
+    margin: 0;
+}
+
+.name1{
+    width: 102px;
+    height: 33px;
+    margin-top: 34px;
+    margin-left: 85px;
+    white-space: nowrap;
+    
+}
+.Dan{
+    font-size: 16px;
+}
+.user1{
+    width: 120px;
+    height: 120px;
+    margin-top: 56px;
+}
+.skills{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Vue{
+    background-color: #41B883;
+    margin-top: 42px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vuejs{
+   margin-top: 10px;
+}
+.user2{
+    width: 120px;
+    height: 120px;
+    margin-top: 56px;
+}
+.name2{
+    width: 102px;
+    height: 33px;
+    margin-top: 34px;
+    margin-left: 96.5px;
+}
+.Angular{
+    background-color: #34474F;
+     margin-top: 42px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+.angularjs{
+    margin-top: 5px;
+}
+.Flutter{
+    background-color: #202124;
+    margin-top: 42px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.flutterjs{
+    margin-top: 5px;
+}
+.React{
+    background-color: #61DAFB;
+    margin-top: 42px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.reactjs{
+    margin-top: 3px;
+}
+.skills-row{
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    margin-top: 5px;
+}
+.user3{
+    width: 120px;
+    height: 120px;
+    margin-top: 56px;
+}
+.name3{
+    width: 102px;
+    height: 33px;
+    margin-top: 34px;
+    margin-left: 85px;
+    white-space: nowrap;
+}
+.Java{
+    background-color: #D63033;
+    margin-top: 42px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.React1{
+    background-color: #0AA9D7;
+    margin-top: 42px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.java{
+    margin-top: 2px;
+}
+.user4{
+    width: 120px;
+    height: 120px;
+    margin-top: 56px;
+}
+.name4{
+    width: 102px;
+    height: 33px;
+    margin-top: 34px;
+    margin-left: 70px;
+    white-space: nowrap;
+}
+.HTML5{
+    background-color: #E44E25;
+    margin-top: 42px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.CSS3{
+    background-color: #1073BB;
+    margin-top: 42px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.html .css{
+    margin-top: 2px;
+}
+
+
+
