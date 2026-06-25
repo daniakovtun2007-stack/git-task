@@ -195,6 +195,11 @@ p{
 .html .css{
     margin-top: 2px;
 }
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
 
 
 
