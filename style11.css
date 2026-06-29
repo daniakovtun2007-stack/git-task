@@ -1,0 +1,230 @@
+*{
+    box-sizing: border-box;
+}
+.body{
+    background-color: white;
+    font-size: 16px;
+    position: relative;
+    padding-bottom: 45px;
+}
+body::after{
+    content: "";
+    display: block;
+    position:absolute;
+    width: 118px;
+    top: 0;
+    bottom: 0;
+    left: 13%;
+    background-color: #F9F9F9;
+    z-index: -1;
+}
+.container{
+    width: 82%;
+    margin: 0 auto;
+}
+header{
+    padding: 55px 0;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo:hover{
+    opacity: 0,8;
+}
+nav a{
+    display: inline-block;
+    position: relative;
+    color:black;
+    text-decoration: none;
+    margin-right: 35px;
+    font-size: 19px;
+    font-weight: 400px;
+    line-height: 120%;
+    letter-spacing: 1px;
+}
+nav a :last-child{
+    margin-right: 0;
+}
+nav a::after{
+    content: "";
+    display: none;
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background-color: #F2994A;
+    position: absolute;
+    margin: 0 50%;
+    bottom: -16px;
+}
+nav a:hover::after{
+    display:block;
+}
+.search-block input{
+    font-size: 19px;
+    font-weight:400;
+    line-height: 120%;
+    letter-spacing: 1px;
+    color: black;
+    border: none;
+    padding: 0 16px;
+}
+.search-block button{
+    background-color: white;
+    border: none;
+}
+.search-block input:focus-visible{
+outline: none;
+}
+.content{
+    padding: 110px 0 50px;
+}
+.content .container{
+    display: flex;
+    justify-content: space-between;
+}
+.image-block{
+    width: 35%;
+}
+.image-block img{
+    width: 100%;
+}
+.text-container{
+    width: 50%;
+}
+.text-block{
+    padding-right: 240px;
+    border-right: 1px solid black;
+    margin-bottom: 32px;
+}
+.text-block h2{
+    position:relative;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 1px;
+    color: #F2994A;
+    margin-bottom: 10px;
+}
+.text-block h2::after{
+    content: "+";
+    position:absolute;
+    right: 0;
+    color: #3F9AB7
+}
+.text-block h1{
+font-size: 65px;
+font-weight: 800;
+line-height: 120%;
+letter-spacing: 1px;
+margin-bottom: 70px;
+}
+.text-block p{
+    padding-top: 24px;
+    font-weight: 400;
+    line-height: 180%;
+    letter-spacing: 1px;
+    position:relative;
+}
+.text-block p::before{
+    content: "";
+    display:block;
+    border-radius: 4px;
+    background:#F2994A;
+    width: 188px;
+    height: 6px;
+    position:absolute;
+    top: 0;
+}
+.social{
+    display: flex;
+    justify-content: space-between;
+}
+.video{
+    display: flex;
+    align-items: center;
+}
+.video button{
+    width: 85px;
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #3F9AB7;
+    border-radius: 100%;
+    margin-right: 20px;
+}
+.video button:hover{
+    background-color: #F2994A;
+}
+.video span{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 1px;
+}
+.social-link a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    text-decoration: none;
+    background-color: transparent;
+    border-radius: 100%;
+    position: relative;
+    text-align:center;
+    right: -16px;
+    margin-bottom: 8px;
+}
+.app{
+    display: none;
+}
+.social-link a:hover{
+    background-color: #F2994A;
+}
+.social-link a:hover .apphover{
+    display:block;
+}
+.social-link a:hover .app{
+    display: none;
+}
+.client{
+    background-color: #3F9AB7;
+    padding: 32px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.client-image{
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+.client-image>img{
+    width: 100%;
+}
+.client-image:nth-child(2){
+    left: -10px;
+}
+.client-image:nth-child(3){
+    left: -20px;
+}
+.client-info{
+    color: white;
+}
+.client-info strong{
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.client-info span{
+    font-size: 20px;
+    font-weight: 400;
+}
