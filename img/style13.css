@@ -1,0 +1,144 @@
+body{
+  padding-left: 24px;
+  padding-right: 24px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+.menu{
+    display: flex;
+    gap: 50px;
+}
+.menu a{
+    text-decoration: none;
+    color: black;
+}
+.actions{
+    display: flex;
+    gap: 20px;
+}
+.icon-btn{
+    background:none;
+    border:none;
+}
+a:hover{
+    color: white;
+    background-color: black;
+}
+section{
+    display: flex;
+    justify-content: space-between;
+}
+.boots{
+    display: flex;
+}
+.boot1{
+    width: 600px;
+    height: 430px;
+    margin-top: 90px;
+}
+.boot2{
+    width: 382px;
+    height: 341px;
+    margin-top: 20px;
+}
+.title button{
+    background-color: black;
+    color: white;
+    width: 195px;
+    height: 50px;
+    border-radius: 10px;
+}
+.title{
+    margin-top: 300px;
+}
+.gender{
+    display: flex;
+    gap: 5px;
+    margin-top: 50px;
+}
+.women{
+    width: 50%;
+    height: 450px;
+    position: relative;
+}
+.men{
+    width: 50%;
+    height: 450px;
+    position: relative;
+}
+.h2{
+    position: absolute;
+    color: white;
+    margin-left: 750px;
+}
+.h1{
+    margin-left: 20px;
+    color: white;
+    position: absolute;
+}
+.container1{
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+}
+.photo{
+    width: 400px;
+    height: 400px;
+}
+.container2{
+    display:flex;
+    overflow-x: auto;
+    gap: 10px;
+}
+.section1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+}
+.button3{
+    width: 235px;
+    height: 55px;
+    background-color: transparent;
+}
+footer{
+    background-color: black;
+    margin-left: -24px;
+    margin-right: -24px;
+    width: 1500px;
+    height: 250px;
+    display: flex;
+    gap: 50px;
+    text-align: center;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+.menu1{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+.menu1 p{
+    color: gray;
+    margin-top: 40px;
+}
+.logo{
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.logos{
+    display: flex;
+    gap: 20px;
+    margin-top: 50px;
+    margin-left: 600px;
+}
