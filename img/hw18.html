@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="hw18.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success py-3">
+        <div class="container text-white">
+    <a class="navbar-brand">DesignCafé</a>
+    <button class="navbar-toggler d-md-none"
+    type="button"
+    data-bs-toggle="offcanvas"
+    data-bs-target="#menu">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="d-none d-md-flex gap-4">
+        <a class="text-white text-decoration-none">DesignCaféとは</a>
+        <a class="text-white text-decoration-none">メニュー</a>
+        <a class="text-white text-decoration-none">お問い合わせ</a>
+        <a class="text-white text-decoration-none">お知らせ</a>
+    </div>
+    </nav>
+    <div class="offcanvas offcanvas-end"
+    tabindex="-1"
+    id="menu">
+    <button class="btn-close bg-success"
+    type="button"
+    data-bs-dismiss="offcanvas"></button>
+    <div class="offcanvas-body d-flex flex-column align-items-center">
+        <a class="text-decoration-none text-success">DesignCaféとは</a>
+        <a class="text-decoration-none text-success">メニュー</a>
+        <a class="text-decoration-none text-success">お問い合わせ</a>
+        <a class="text-decoration-none text-success">お知らせ</a>
+    </div>
+        
+    </div>
+    <header class="header d-flex justify-content-center align-items-center">
+        Grand Open
+    </header>
+    <section class="section text-center">
+        <div><h3>Menu</h3><br>
+          <p>メニュー</p></div>
+          <div class="container">
+            <div class="row">
+            <div class="col-4">
+            <img class="image" src="7e8ef81a05d2e80e6f811bae1ccd1231d35ae5d0.jpg" alt="image">
+            </div>
+            <div class="col-4">
+            <img class="image" src="ff3430c0ec442f5f42bd2c37dd1ffc52ce91b8d4.jpg" alt="image">
+            </div>
+            <div class="col-4">
+            <img class="image" src="68158a1585b519ba25fe7772a738dee0dc100481.jpg" alt="image">
+            </div>
+            </div>
+          </div>
+          <button class="btn1 text-center text-white bg-success mt-5">デフォルト</button>
+    </section>
+    <section class="section1 text-center mt-3">
+        <h1>Menu <br>
+            メニュー</h1>
+            <h1>DesignCaféは、色々なクリエイターが、<br>
+交流する空間カフェです。<br>
+仲間を探したり、仕事を依頼したり、<br>
+新たな出会いを探してみませんか。</h1>
+<button class="btn1 text-center text-white bg-success mt-5">もっと見る <img src="Vector (10).png" alt="vector"></button>
+    </section>
+    <div class="polygon bg-success"><img src="Polygon 1.png"></div>
+    <section class="sctn d-flex flex-column justify-content-center align-items-center">
+        <h3 class="mb-5">News<br>
+            メニュー</h3>
+            <div class="news">
+                <p>11/6（土）                   17時より世界中から集めたデザイン・映像作品の上映会を開催します。</p>
+                <p>10/29（土）                  グランド・オープンいたしました。皆様のお越しを心よりお待ちしております。</p>
+            </div>
+    </section>
+    <footer class="bg-black text-white d-flex justify-content-between py-3">
+        <div>東京都港区赤坂xx-xx<br>
+(03) 9999-9999<br>
+contact@designcafe.com</div>
+<div>(c) 2022 DesignCafé. All rights reserved.</div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
