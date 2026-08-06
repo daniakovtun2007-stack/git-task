@@ -16,8 +16,10 @@ if (month === 12 || month === 1 || month === 2) {
     console.log("Весна");
 } else if (month >= 6 && month <= 8) {
     console.log("Літо");
-} else {
+} else if (month >= 9 && month <= 11) {
     console.log("Осінь");
+} else {
+    console.log("Некоректне значення місяця");
 }
 let number = Number(prompt("Введіть число:"));
 if (number > 0) {
