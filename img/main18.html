@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main 18 JS</title>
+    <script src="main18.js"></script>
+</head>
+<body>
+<form>
+    <label>
+        <input type="radio" name="color" value="red" onchange="changeColor(this)">
+        Червоний
+    </label>
+
+    <label>
+        <input type="radio" name="color" value="green" onchange="changeColor(this)">
+        Зелений
+    </label>
+
+    <label>
+        <input type="radio" name="color" value="blue" onchange="changeColor(this)">
+        Синій
+    </label>
+</form>
+<form>
+    <label>
+        <input type="checkbox" value="Читання" onchange="showHobbies()">
+        Читання
+    </label>
+
+    <label>
+        <input type="checkbox" value="Спорт" onchange="showHobbies()">
+        Спорт
+    </label>
+
+    <label>
+        <input type="checkbox" value="Музика" onchange="showHobbies()">
+        Музика
+    </label>
+</form>
+
+<p id="result"></p>
+<select id="country" onchange="showCountry(this)">
+    <option value="">Оберіть країну</option>
+    <option value="ukraine">Україна</option>
+    <option value="canada">Канада</option>
+    <option value="france">Франція</option>
+</select>
+<p id="result"></p>
+<form>
+    <p>Оцініть якість обслуговування:</p>
+
+    <label>
+        <input type="radio" name="rating" value="1" onchange="showRating(this)">
+        1
+    </label>
+
+    <label>
+        <input type="radio" name="rating" value="2" onchange="showRating(this)">
+        2
+    </label>
+
+    <label>
+        <input type="radio" name="rating" value="3" onchange="showRating(this)">
+        3
+    </label>
+
+    <label>
+        <input type="radio" name="rating" value="4" onchange="showRating(this)">
+        4
+    </label>
+
+    <label>
+        <input type="radio" name="rating" value="5" onchange="showRating(this)">
+        5
+    </label>
+</form>
+
+<p id="result1"></p>
+
+<select id="pizza" onchange="calculatePrice()">
+    <option value="100">Маргарита</option>
+    <option value="120">Пепероні</option>
+    <option value="150">4 сири</option>
+</select>
+
+<p>Розмір:</p>
+
+<label>
+    <input type="radio" name="size" value="50" onchange="calculatePrice()">
+    Маленька
+</label>
+
+<label>
+    <input type="radio" name="size" value="100" onchange="calculatePrice()">
+    Середня
+</label>
+
+<label>
+    <input type="radio" name="size" value="150" onchange="calculatePrice()">
+    Велика
+</label>
+
+<p>Додаткові начинки:</p>
+
+<label>
+    <input type="checkbox" value="25" onchange="calculatePrice()">
+    Сир
+</label>
+
+<label>
+    <input type="checkbox" value="25" onchange="calculatePrice()">
+    Гриби
+</label>
+
+<label>
+    <input type="checkbox" value="25" onchange="calculatePrice()">
+    Оливки
+</label>
+
+<p id="price">Ціна: 0 грн</p>
+    <script src="main18.js"></script>
+</body>
+</html>
