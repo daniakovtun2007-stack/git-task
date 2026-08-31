@@ -1,0 +1,14 @@
+{
+    "name": "Danya",
+    "age": 18,
+    "isStudent": true,
+    "hobbies": [
+        "programming",
+        "sport",
+        "music"
+    ],
+    "address": {
+        "city": "Woodstock",
+        "country": "Canada"
+    }
+}
