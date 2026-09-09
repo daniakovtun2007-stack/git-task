@@ -9,8 +9,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
-    "gulp": "^5.0.1"
+    "gulp": "^5.0.1",
+    "gulp-clean-css": "^4.3.0"
   }
 }
