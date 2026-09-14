@@ -1,122 +1,51 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import React, { Component } from 'react';
+import { Header } from "./Header";
+import { HeroContent } from "./HeroContent";
+import { Carousel } from "./Carousel";
+import { AgeBadge } from "./AgeBadge";
+import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
+// 1. Додано / на початку кожної картинки
+const POPULAR_ITEMS = [
+  { id: 1, title: 'Breaking Bad', image: '/img/Rectangle 6.png' },
+  { id: 2, title: 'The Rain', image: '/img/Rectangle 7.png' },
+  { id: 3, title: 'Life in a Year', image: '/img/Rectangle 8.png' },
+  { id: 4, title: 'Money Heist: Korea', image: '/img/Rectangle 9.png' },
+  { id: 5, title: 'Squid Game', image: '/img/Rectangle 11.png' },
+];
 
-  return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+export class App extends Component {
+  render() {
+    return (
+      <div className="hero-container">
+        <div className="overlay"></div>
+
+        {/* 2. Додано / на початку шляхів у пропсах */}
+        <Header
+          date="Friday July 8th"
+          logoSrc="/img/netflix-logo-png-2562 1.png"
+          searchIconSrc="/img/Vector.svg"
+          avatarSrc="/img/Ellipse 2.png"
+        />
+
+        <HeroContent
+          genres={['Drama', 'Thriller', 'Supernatural']}
+          title="Stranger Things"
+          year="2019"
+          director="Shawn Levy"
+          seasonsCount={3}
+          episodesCount={5}
+          description="In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries."
+          ratingImageSrc="/img/Group 5.svg"
+        />
+
+        <div className="footer-wrapper">
+          <Carousel title="POPULAR THIS WEEK" items={POPULAR_ITEMS} />
+          <AgeBadge age="16+" />
         </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+      </div>
+    );
+  }
 }
 
-export default App
+export default App;
