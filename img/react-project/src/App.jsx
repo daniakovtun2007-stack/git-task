@@ -3,29 +3,37 @@ import { Header } from "./Header";
 import { HeroContent } from "./HeroContent";
 import { Carousel } from "./Carousel";
 import { AgeBadge } from "./AgeBadge";
+import bgImage from './assets/bg.jpg';
+import netflixLogo from './assets/netflix-logo.png';
+import searchIcon from './assets/search-icon.svg';
+import avatar from './assets/avatar.png';
+import ratingImage from './assets/rating.svg';
+import movie1 from './assets/movie-1.png';
+import movie2 from './assets/movie-2.png';
+import movie3 from './assets/movie-3.png';
+import movie4 from './assets/movie-4.png';
+import movie5 from './assets/movie-5.png';
 import './App.css';
 
-// 1. Додано / на початку кожної картинки
 const POPULAR_ITEMS = [
-  { id: 1, title: 'Breaking Bad', image: '/img/Rectangle 6.png' },
-  { id: 2, title: 'The Rain', image: '/img/Rectangle 7.png' },
-  { id: 3, title: 'Life in a Year', image: '/img/Rectangle 8.png' },
-  { id: 4, title: 'Money Heist: Korea', image: '/img/Rectangle 9.png' },
-  { id: 5, title: 'Squid Game', image: '/img/Rectangle 11.png' },
+  { id: 1, title: 'Breaking Bad', image: movie1 },
+  { id: 2, title: 'The Rain', image: movie2 },
+  { id: 3, title: 'Life in a Year', image: movie3 },
+  { id: 4, title: 'Money Heist: Korea', image: movie4 },
+  { id: 5, title: 'Squid Game', image: movie5 },
 ];
 
 export class App extends Component {
   render() {
     return (
-      <div className="hero-container">
+      <div className="hero-container" style={{ backgroundImage: `url(${bgImage})` }}>
         <div className="overlay"></div>
 
-        {/* 2. Додано / на початку шляхів у пропсах */}
         <Header
           date="Friday July 8th"
-          logoSrc="/img/netflix-logo-png-2562 1.png"
-          searchIconSrc="/img/Vector.svg"
-          avatarSrc="/img/Ellipse 2.png"
+          logoSrc={netflixLogo}
+          searchIconSrc={searchIcon}
+          avatarSrc={avatar}
         />
 
         <HeroContent
@@ -36,7 +44,7 @@ export class App extends Component {
           seasonsCount={3}
           episodesCount={5}
           description="In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries."
-          ratingImageSrc="/img/Group 5.svg"
+          ratingImageSrc={ratingImage}
         />
 
         <div className="footer-wrapper">
