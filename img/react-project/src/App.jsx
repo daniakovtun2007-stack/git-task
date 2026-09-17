@@ -23,6 +23,7 @@ const POPULAR_ITEMS = [
   { id: 4, title: 'Money Heist: Korea', image: movie4 },
   { id: 5, title: 'Squid Game', image: movie5 },
 ];
+const types = ['Drama', 'Thriller', 'Supernatural'];
 let isLoggedIn = false;
 export class App extends Component {
   render() {
@@ -43,7 +44,11 @@ export class App extends Component {
 />
 
         <HeroContent
-          genres={['Drama', 'Thriller', 'Supernatural']}
+          genres={types.map((type, index) => (
+            <span key={index} className="genre">
+              {type}
+            </span>
+          ))}
           title="Stranger Things"
           year="2019"
           director="Shawn Levy"

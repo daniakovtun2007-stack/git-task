@@ -1,9 +1,11 @@
 import React from "react";
 import "./App.css";
-
+let LogBtn = () => {
+  alert('You logged in!');
+}
 export function LoginBtn() {
   return (
-    <button className="login-btn ">
+    <button onClick={LogBtn} className="login-btn ">
       Login
     </button>
   );

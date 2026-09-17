@@ -1,5 +1,9 @@
 import React from 'react';
 
+let streamBtn = () => {
+  alert('Stream Now button clicked!');
+}
+
 export function HeroContent(props) {
   return (
     <main className="content">
@@ -33,7 +37,7 @@ export function HeroContent(props) {
       </div>
 
       <div className="action-buttons">
-        <a href="#" className="btn btn-primary">
+        <a href="#" className="btn btn-primary" onClick={streamBtn}>
           STREAM NOW <i className="fa-solid fa-circle-play"></i>
         </a>
         <a href="#" className="btn btn-secondary">
