@@ -14,7 +14,9 @@ import movie3 from './assets/movie-3.png';
 import movie4 from './assets/movie-4.png';
 import movie5 from './assets/movie-5.png';
 import { LoginBtn } from "./LoginBtn.jsx";
+import {useState} from "react";
 import './App.css';
+
 
 const POPULAR_ITEMS = [
   { id: 1, title: 'Breaking Bad', image: movie1 },
@@ -23,6 +25,7 @@ const POPULAR_ITEMS = [
   { id: 4, title: 'Money Heist: Korea', image: movie4 },
   { id: 5, title: 'Squid Game', image: movie5 },
 ];
+
 const types = ['Drama', 'Thriller', 'Supernatural'];
 let isLoggedIn = false;
 export class App extends Component {
