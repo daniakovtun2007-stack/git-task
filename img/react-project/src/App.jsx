@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { Header } from "./Header";
 import { HeroContent } from "./HeroContent";
 import { Carousel } from "./Carousel";
@@ -13,10 +13,7 @@ import movie2 from './assets/movie-2.png';
 import movie3 from './assets/movie-3.png';
 import movie4 from './assets/movie-4.png';
 import movie5 from './assets/movie-5.png';
-import { LoginBtn } from "./LoginBtn.jsx";
-import {useState} from "react";
 import './App.css';
-
 
 const POPULAR_ITEMS = [
   { id: 1, title: 'Breaking Bad', image: movie1 },
@@ -27,47 +24,48 @@ const POPULAR_ITEMS = [
 ];
 
 const types = ['Drama', 'Thriller', 'Supernatural'];
-let isLoggedIn = false;
-export class App extends Component {
-  render() {
-    return (
-      <div className="hero-container" style={{ backgroundImage: `url(${bgImage})` }}>
-        <div className="overlay"></div>
-        {!isLoggedIn ? (
-  <LoginBtn className="login-btn" />
-) : (
-  <img className="avatar" src={avatar} alt="User Profile" />
-)}
-        <Header
-  date="Friday July 8th"
-  logoSrc={netflixLogo}
-  searchIconSrc={searchIcon}
-  avatarSrc={avatar}
-  isLoggedIn={isLoggedIn}
-/>
 
-        <HeroContent
-          genres={types.map((type, index) => (
-            <span key={index} className="genre">
-              {type}
-            </span>
-          ))}
-          title="Stranger Things"
-          year="2019"
-          director="Shawn Levy"
-          seasonsCount={3}
-          episodesCount={5}
-          description="In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries."
-          ratingImageSrc={ratingImage}
-        />
+export function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-        <div className="footer-wrapper">
-          <Carousel title="POPULAR THIS WEEK" items={POPULAR_ITEMS} />
-          <AgeBadge age="16+" />
-        </div>
+  const handleLogin = () => setIsLoggedIn(true);
+  const handleLogout = () => setIsLoggedIn(false);
+
+  return (
+    <div className="hero-container" style={{ backgroundImage: `url(${bgImage})` }}>
+      <div className="overlay"></div>
+
+      <Header
+        date="Friday July 8th"
+        logoSrc={netflixLogo}
+        searchIconSrc={searchIcon}
+        avatarSrc={avatar}
+        isLoggedIn={isLoggedIn}
+        onLogin={handleLogin}
+        onLogout={handleLogout}
+      />
+
+      <HeroContent
+        genres={types.map((type, index) => (
+          <span key={index} className="genre">
+            {type}
+          </span>
+        ))}
+        title="Stranger Things"
+        year="2019"
+        director="Shawn Levy"
+        seasonsCount={3}
+        episodesCount={5}
+        description="In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries."
+        ratingImageSrc={ratingImage}
+      />
+
+      <div className="footer-wrapper">
+        <Carousel title="POPULAR THIS WEEK" items={POPULAR_ITEMS} />
+        <AgeBadge age="16+" />
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default App;

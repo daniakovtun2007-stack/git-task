@@ -1,19 +1,29 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 export function Header(props) {
-
   const [search, setSearch] = useState("");
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
+  useEffect(() => {
+    console.log("Поле пошуку відкрито:", isSearchOpen);
+  }, [isSearchOpen]);
+
   function showSearchInput() {
-    setIsSearchOpen(isSearchOpen => !isSearchOpen);
+    setIsSearchOpen((prev) => !prev);
+  }
+
+  function handleLogoutClick() {
+    const result = window.confirm("Are you sure you want to log out?");
+    if (result) {
+      props.onLogout();
+      alert("You logged out!");
+    }
   }
 
   return (
     <header className="header">
-
+      {/* LEFT */}
       <div className="header-left">
-
         <a href="#" className="logo-link">
           <img
             className="logo"
@@ -21,19 +31,14 @@ export function Header(props) {
             alt="Netflix Logo"
           />
         </a>
-
         <span className="divider">|</span>
-
-        <span className="date">
-          {props.date}
-        </span>
-
+        <span className="date">{props.date}</span>
       </div>
 
+      {/* RIGHT */}
       <div className="header-right">
-
+        {/* SEARCH */}
         {isSearchOpen && (
-          <>
           <div>
             <input
               className="search-input"
@@ -41,10 +46,8 @@ export function Header(props) {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
-
             <p>Search: {search}</p>
-            </div>
-          </>
+          </div>
         )}
 
         <button
@@ -52,22 +55,27 @@ export function Header(props) {
           className="icon-btn"
           aria-label="Search"
         >
-          <img
-            src={props.searchIconSrc}
-            alt="Search"
-          />
+          <img src={props.searchIconSrc} alt="Search" />
         </button>
 
-        {props.isLoggedIn && (
-          <img
-            className="avatar"
-            src={props.avatarSrc}
-            alt="User Profile"
-          />
+        {/* AUTH BUTTONS & AVATAR */}
+        {props.isLoggedIn ? (
+          <>
+            <button onClick={handleLogoutClick} className="logout-btn">
+              Logout
+            </button>
+            <img
+              className="avatar"
+              src={props.avatarSrc}
+              alt="User Profile"
+            />
+          </>
+        ) : (
+          <button onClick={props.onLogin} className="login-btn">
+            Login
+          </button>
         )}
-
       </div>
-
     </header>
   );
 }
