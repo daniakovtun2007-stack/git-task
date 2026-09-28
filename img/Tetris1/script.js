@@ -22,42 +22,35 @@ const COLORS = [
 ];
 
 const SHAPES = [
-    // I
     [
         [1, 1, 1, 1]
     ],
 
-    // O
     [
         [1, 1],
         [1, 1]
     ],
 
-    // T
     [
         [0, 1, 0],
         [1, 1, 1]
     ],
 
-    // S
     [
         [0, 1, 1],
         [1, 1, 0]
     ],
 
-    // Z
     [
         [1, 1, 0],
         [0, 1, 1]
     ],
 
-    // J
     [
         [1, 0, 0],
         [1, 1, 1]
     ],
 
-    // L
     [
         [0, 0, 1],
         [1, 1, 1]
@@ -81,9 +74,6 @@ let dropCounter;
 let lastTime;
 
 
-/* =========================
-   CREATE BOARD
-========================= */
 
 function createBoard() {
 
@@ -94,9 +84,6 @@ function createBoard() {
 }
 
 
-/* =========================
-   CREATE PIECE
-========================= */
 
 function createPiece() {
 
@@ -118,9 +105,6 @@ function createPiece() {
 }
 
 
-/* =========================
-   DRAW BLOCK
-========================= */
 
 function drawBlock(x, y, color) {
 
@@ -144,10 +128,6 @@ function drawBlock(x, y, color) {
 }
 
 
-/* =========================
-   DRAW BOARD
-========================= */
-
 function drawBoard() {
 
     for (let y = 0; y < ROWS; y++) {
@@ -167,9 +147,6 @@ function drawBoard() {
 }
 
 
-/* =========================
-   DRAW PLAYER
-========================= */
 
 function drawPlayer() {
 
@@ -192,9 +169,6 @@ function drawPlayer() {
 }
 
 
-/* =========================
-   DRAW
-========================= */
 
 function draw() {
 
@@ -213,9 +187,6 @@ function draw() {
 }
 
 
-/* =========================
-   COLLISION
-========================= */
 
 function collision() {
 
@@ -236,7 +207,7 @@ function collision() {
                 player.y + y;
 
 
-            // Стіни та дно
+
 
             if (
                 newX < 0 ||
@@ -248,7 +219,6 @@ function collision() {
             }
 
 
-            // Інші блоки
 
             if (
                 newY >= 0 &&
@@ -264,9 +234,6 @@ function collision() {
 }
 
 
-/* =========================
-   MERGE
-========================= */
 
 function merge() {
 
@@ -286,9 +253,6 @@ function merge() {
 }
 
 
-/* =========================
-   CLEAR LINES
-========================= */
 
 function clearLines() {
 
@@ -342,9 +306,6 @@ function clearLines() {
 }
 
 
-/* =========================
-   MOVE DOWN
-========================= */
 
 function moveDown() {
 
@@ -371,9 +332,6 @@ function moveDown() {
 }
 
 
-/* =========================
-   MOVE LEFT
-========================= */
 
 function moveLeft() {
 
@@ -388,9 +346,6 @@ function moveLeft() {
 }
 
 
-/* =========================
-   MOVE RIGHT
-========================= */
 
 function moveRight() {
 
@@ -405,9 +360,6 @@ function moveRight() {
 }
 
 
-/* =========================
-   ROTATE
-========================= */
 
 function rotate() {
 
@@ -436,8 +388,6 @@ function rotate() {
     player.shape = newShape;
 
 
-    // Якщо після повороту зіткнення
-    // повертаємо стару фігуру
 
     if (collision()) {
 
@@ -448,9 +398,6 @@ function rotate() {
 }
 
 
-/* =========================
-   KEYBOARD
-========================= */
 
 document.addEventListener(
     "keydown",
@@ -487,9 +434,6 @@ document.addEventListener(
 );
 
 
-/* =========================
-   GAME LOOP
-========================= */
 
 function update(time = 0) {
 
@@ -530,9 +474,6 @@ function update(time = 0) {
 }
 
 
-/* =========================
-   GAME OVER
-========================= */
 
 function drawGameOver() {
 
