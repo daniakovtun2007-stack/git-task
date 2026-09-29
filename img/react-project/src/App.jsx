@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Header } from "./Header";
 import { HeroContent } from "./HeroContent";
 import { Carousel } from "./Carousel";
 import { AgeBadge } from "./AgeBadge";
+import Price from "./Price";
+import Contact from "./Contact";
+import About from "./About";
+
 import bgImage from './assets/bg.jpg';
 import netflixLogo from './assets/netflix-logo.png';
 import searchIcon from './assets/fe_search.svg';
@@ -23,28 +28,11 @@ const POPULAR_ITEMS = [
   { id: 5, title: 'Squid Game', image: movie5 },
 ];
 
-const types = ['Drama', 'Thriller', 'Supernatural'];
+const types = ['Драма', 'Трилер', 'Містика'];
 
-export function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const handleLogin = () => setIsLoggedIn(true);
-  const handleLogout = () => setIsLoggedIn(false);
-
+function Home() {
   return (
-    <div className="hero-container" style={{ backgroundImage: `url(${bgImage})` }}>
-      <div className="overlay"></div>
-
-      <Header
-        date="Friday July 8th"
-        logoSrc={netflixLogo}
-        searchIconSrc={searchIcon}
-        avatarSrc={avatar}
-        isLoggedIn={isLoggedIn}
-        onLogin={handleLogin}
-        onLogout={handleLogout}
-      />
-
+    <>
       <HeroContent
         genres={types.map((type, index) => (
           <span key={index} className="genre">
@@ -56,15 +44,47 @@ export function App() {
         director="Shawn Levy"
         seasonsCount={3}
         episodesCount={5}
-        description="In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries."
+        description="У 1980-х роках у штаті Індіана група молодих друзів стає свідками надприродних сил та таємних урядових експериментів. Шукаючи відповіді, діти розкривають серію надзвичайних таємниць."
         ratingImageSrc={ratingImage}
       />
 
       <div className="footer-wrapper">
-        <Carousel title="POPULAR THIS WEEK" items={POPULAR_ITEMS} />
+        <Carousel title="ПОПУЛЯРНЕ ЦЬОГО ТИЖНЯ" items={POPULAR_ITEMS} />
         <AgeBadge age="16+" />
       </div>
-    </div>
+    </>
+  );
+}
+
+export function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLogin = () => setIsLoggedIn(true);
+  const handleLogout = () => setIsLoggedIn(false);
+
+  return (
+    <BrowserRouter>
+      <div className="hero-container" style={{ backgroundImage: `url(${bgImage})` }}>
+        <div className="overlay"></div>
+
+        <Header
+          date="П'ятниця, 8 липня"
+          logoSrc={netflixLogo}
+          searchIconSrc={searchIcon}
+          avatarSrc={avatar}
+          isLoggedIn={isLoggedIn}
+          onLogin={handleLogin}
+          onLogout={handleLogout}
+        />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/price" element={<Price />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

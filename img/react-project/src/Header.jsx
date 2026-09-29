@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export function Header(props) {
   const [search, setSearch] = useState("");
@@ -13,40 +14,46 @@ export function Header(props) {
   }
 
   function handleLogoutClick() {
-    const result = window.confirm("Are you sure you want to log out?");
+    const result = window.confirm("Ви впевнені, що хочете вийти?");
     if (result) {
       props.onLogout();
-      alert("You logged out!");
+      alert("Ви успішно вийшли!");
     }
   }
 
   return (
     <header className="header">
-      {/* LEFT */}
+      {/* LЕFT */}
       <div className="header-left">
-        <a href="#" className="logo-link">
+        <Link to="/" className="logo-link">
           <img
             className="logo"
             src={props.logoSrc}
             alt="Netflix Logo"
           />
-        </a>
+        </Link>
         <span className="divider">|</span>
         <span className="date">{props.date}</span>
       </div>
 
       {/* RIGHT */}
       <div className="header-right">
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/price">Price</Link>
+          <Link to="/contact">Contact</Link>
+        </nav>
+
         {/* SEARCH */}
         {isSearchOpen && (
-          <div>
+          <div className="search-box">
             <input
               className="search-input"
               placeholder="Search..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
-            <p>Search: {search}</p>
           </div>
         )}
 
@@ -79,3 +86,5 @@ export function Header(props) {
     </header>
   );
 }
+
+export default Header;
