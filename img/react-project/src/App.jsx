@@ -7,7 +7,7 @@ import { AgeBadge } from "./AgeBadge";
 import Price from "./Price";
 import Contact from "./Contact";
 import About from "./About";
-
+import Swiper from "swiper"
 import bgImage from './assets/bg.jpg';
 import netflixLogo from './assets/netflix-logo.png';
 import searchIcon from './assets/fe_search.svg';
